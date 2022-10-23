@@ -56,8 +56,8 @@ export default class Explore extends Component{
             placeholder="Search here"
             onChange={this.handleSearchValue}
             />
-          <button onClick={this.handleSearch}>
-            Go
+          <button className="search-button" onClick={this.handleSearch}>
+            Submit
           </button>
         </div>
         <div class="cards">
