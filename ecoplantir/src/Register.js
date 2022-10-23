@@ -43,13 +43,13 @@ export default class Login extends Component {
     // this.checkingOnClick = this.checkingOnClick.bind(this);
   }
   async componentDidUpdate() {
-    // try {
-    //   if(this.state.check){
-    //   signup(this.state.email, this.state.password);
-    //   }
-    // } catch (error) {
-    //   alert("Error");
-    // }
+    try {
+      if(this.state.check){
+      signup(this.state.pastEmail, this.state.pastPassword);
+      }
+    } catch (error) {
+      alert("Error");
+    }
   }
   handleEmail(event) {
     this.setState({
@@ -154,7 +154,9 @@ export default class Login extends Component {
       });
       this.setState({
         email: '',
-        password: ''
+        password: '',
+        confirmPassword: ''
+
       });
     }
   }

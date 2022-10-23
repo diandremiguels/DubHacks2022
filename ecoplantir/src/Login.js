@@ -121,7 +121,6 @@ export default class Login extends Component{
   }
   render() {
     return(
-<<<<<<< HEAD
       <div className="container-app">
         <h4>LOGIN</h4>
         {this.handleEmpty()}
@@ -150,12 +149,6 @@ export default class Login extends Component{
             </div>
         </form>
       </div>
-=======
-      <div>
-        <h3>This is where Login will be!</h3>
-      </div>
-      
->>>>>>> main
     );
   }
 }

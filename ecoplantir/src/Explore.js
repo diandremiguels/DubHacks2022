@@ -39,9 +39,9 @@ export default class Explore extends Component{
   }
   render() {
     return(
-      
+
       <div class="explore-page explore-background">
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
         <div class="explore-display-text">
           <h1><b> Explore Sustainable Plants </b></h1>
@@ -64,28 +64,28 @@ export default class Explore extends Component{
             <a onClick={this.handleSustainability} href="/Results" class="card" value="Produce">
               <img class="card-image" src={PlantPic}/>
               <div class="card-text">
-                <h4><b> Reduce Grocery Waste </b></h4> 
-                <p> With the purchase of groceries comes common additional side effects such as air pollution from trucks or 
+                <h4><b> Reduce Grocery Waste </b></h4>
+                <p> With the purchase of groceries comes common additional side effects such as air pollution from trucks or
                   excessive waste from packaging. Growing edible plants at home can help reduce one's personal contribution
-                  to this source of waste. </p> 
+                  to this source of waste. </p>
               </div>
             </a>
             <a onClick={this.handleSustainability} href="/Results" class="card" value="Ecology">
               <img src={PlantPic}/>
               <div class="card-text">
-                <h4><b> Support Local Ecology </b></h4> 
+                <h4><b> Support Local Ecology </b></h4>
                 <p> Help support the local biodiversity by growing native plants that provide services to other local organisms.
-                  Native plants can also help protect against foreign pests and diseases, and will generally need fewer additional 
-                  resources compared to imported plants. </p> 
+                  Native plants can also help protect against foreign pests and diseases, and will generally need fewer additional
+                  resources compared to imported plants. </p>
               </div>
             </a>
             <a onClick={this.handleSustainability} href="/Results" class="card" value="Soil">
               <img src={PlantPic}/>
               <div class="card-text">
-                <h4><b> Improve Soil Health </b></h4> 
+                <h4><b> Improve Soil Health </b></h4>
                 <p> Cover crops help lessen soil erosion and add organic nutrients to soil when they turn over to seed.
                   This can reduce the need for artificial fertilizers as well as reducing emissions from transportation of purchased
-                  manure or compost for plants.</p> 
+                  manure or compost for plants.</p>
               </div>
             </a>
         </div>

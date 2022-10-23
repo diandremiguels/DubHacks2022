@@ -31,22 +31,22 @@ export default class Results extends Component{
   }
 
   render() {
-    
+
     return(
       <div class="results-background">
         <div class="results-title">
           <h1>Recommendations</h1>
           <p>{this.props.sustainability}</p>
         </div>
-        
+
         <a>
           <button class="filter-button" id="button" onClick={this.changeFilterDisplay}>{this.state.filter}</button>
         </a>
         <div id="filters" class="results-text no-display">
-          
+
           <div>
             <div>
-              Care Difficulty&nbsp;&nbsp;
+              Care Difficulty <br></br>
               <select class="form-response">
                 <option>Any</option>
                <option>Easy</option>
@@ -55,7 +55,7 @@ export default class Results extends Component{
              </select>
             </div>
             <div>
-              Space&nbsp;&nbsp;
+              Space <br></br>
               <select class="form-response">
                 <option>Any</option>
                 <option>Small (Desktop)</option>
@@ -64,7 +64,7 @@ export default class Results extends Component{
               </select>
             </div>
             <div>
-              Light Conditions&nbsp;&nbsp;
+              Light Conditions <br></br>
               <select class="form-response">
                 <option>Any</option>
                 <option>Low (Cloudy)</option>
@@ -73,7 +73,7 @@ export default class Results extends Component{
               </select>
             </div>
             <div>
-              Location&nbsp;&nbsp;
+              Location <br></br>
               <select class="form-response">
                 <option>Any</option>
                 <option>Alabama</option>
@@ -129,7 +129,7 @@ export default class Results extends Component{
               </select>
             </div>
             <div>
-              Sustainability Reason&nbsp;&nbsp;
+              Sustainability Reason <br></br>
               <select className="form-response">
                 <option>Any</option>
                 <option>Reduce Grocery Waste (Produce)</option>
@@ -139,10 +139,10 @@ export default class Results extends Component{
             </div>
             <button class="results-button">Search</button>
           </div>
-          
+
         </div>
         <div>
-        
+
         </div>
       </div>
     );

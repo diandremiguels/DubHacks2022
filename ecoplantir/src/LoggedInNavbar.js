@@ -14,11 +14,11 @@ export default class LoggedInNavbar extends Component{
       check:true
     });
   }
-  async componentDidMount(){
-    // await signup(this.state.email, this.state.password);
+  async componentDidUpdate(){
     try {
       if(this.state.check){
       await logout();
+      this.props.parentCallback(this.state.check);
       }
     } catch (error) {
       alert("Error");
@@ -27,16 +27,14 @@ export default class LoggedInNavbar extends Component{
   render() {
     return(
       <nav className="modified-nav">
+        <p>EcoPlantir</p>
         <ul>
           <div className="group-elements">
           <li>
-            {/* <a href="/" onClick={this.handleLogOut}>Log Out</a> */}
+            <a href="/" onClick={this.handleLogOut}>Log Out</a>
           </li>
           <li>
             <a href="/About">Contact Us</a>
-          </li>
-          <li>
-            <a href="/">About</a>
           </li>
           <li>
             <a href="/Home">Home</a>
