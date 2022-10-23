@@ -4,10 +4,6 @@ export default class Login extends Component{
     return(
       <div>
         <h3>This is where Login will be!</h3>
-
-        <script>
-
-        </script>
       </div>
       
     );
