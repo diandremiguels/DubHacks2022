@@ -5,6 +5,7 @@ import About from './About.js';
 import Navbar from './Navbar.js';
 import Register from './Register.js';
 import Home from './Home.js';
+import Results from './Results.js';
 
 function App() {
   let component
@@ -23,6 +24,8 @@ function App() {
       break
     case "/Register":
       component = <Register/>
+    case "/Results":
+      component = <Results/>
   }
   return (
     <div className="App">
