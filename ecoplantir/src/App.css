@@ -37,7 +37,6 @@
     transform: rotate(360deg);
   }
 }
-<<<<<<< HEAD
 .nav p{
   margin-top: 1.5%;
   margin-left: 2%;
@@ -330,9 +329,19 @@ padding-right: 5%;
   position: relative;
   outline:none;
 }
-.button-error{
-=======
-
+.button-error{  
+color: #fff;
+background-color: #BB0A10;
+border-color:#BB0A10;
+font-weight:bold;
+width: 90%;
+height: 3.1em;
+font-size: 14px;
+margin-top:3%;
+border-radius: 2px;
+overflow: relative;
+outline:none;
+}
 body{
   /* background-image : url("images/pexels-sameera-madusanka-1572036.jpg");
   background-repeat: no-repeat ;
@@ -590,12 +599,10 @@ select option{
   margin-top: 3%;
 }
 .filter-button{
->>>>>>> main
   color: #fff;
   background-color: #BB0A10;
   border-color:#BB0A10;
   font-weight:bold;
-<<<<<<< HEAD
   width: 90%;
   height: 3.1em;
   font-size: 14px;
@@ -620,7 +627,6 @@ select option{
   padding-right:2%;
 }
 .button-other-error{
-=======
   width: 10%;
   height: 3.1em;
   font-size: 14px;
@@ -628,12 +634,10 @@ select option{
 }
 
 .search-button{
->>>>>>> main
   color: #fff;
   background-color: #BB0A10;
   border-color:#BB0A10;
   font-weight:bold;
-<<<<<<< HEAD
   width: 90%;
   height: 3.1em;
   font-size: 14px;
@@ -654,10 +658,8 @@ select option{
   padding-top:0.5%;
   padding-left:2%;
   font-size: 14px;
-=======
   width: 10%;
   height: 45px;
   font-size: 14px;
   margin-top: 1.5%;
->>>>>>> main
 }
