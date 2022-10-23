@@ -37,6 +37,7 @@
     transform: rotate(360deg);
   }
 }
+<<<<<<< HEAD
 .nav p{
   margin-top: 1.5%;
   margin-left: 2%;
@@ -330,10 +331,271 @@ padding-right: 5%;
   outline:none;
 }
 .button-error{
+=======
+
+body{
+  /* background-image : url("images/pexels-sameera-madusanka-1572036.jpg");
+  background-repeat: no-repeat ;
+  background-attachment: fixed;
+  background-size: cover; */
+  padding-bottom:50px;
+}
+
+body#home{
+  background-image : url("images/20190603_103903-trees-canopy-scaled.jpg");
+  background-repeat: no-repeat ;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.explore-card{
+  display:inline-block;
+}
+
+.explore-display-text{
+  color:white;
+  font: xx-large;
+}
+
+.explore-searchbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1%;
+    width: 30%;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.explore-page {
+  width:100%;
+}
+
+.cards {
+
+  padding-top:5%;
+  
+  margin-bottom: 5%;
+
+  display: grid;
+   
+  grid-template-columns: repeat(3, 1fr);
+   
+  grid-auto-rows: auto;
+   
+  grid-gap: 1rem;
+
+  justify-items:center;
+
+  width:60%;
+
+  margin:auto;
+   
+  }
+
+.card {
+  display: flex;
+ 
+  border: 2px solid #e7e7e7;
+   
+  border-radius: 4px;
+
+  padding: .5rem;
+
+  margin-bottom: 10%;
+  
+  width:95%;
+
+  transition: all .2s ease-in-out;
+
+  text-decoration: none;
+
+  }
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-text {
+  padding-top:2%;
+  text-decoration: none;
+  color:black;
+}
+
+.card-image {
+  padding-bottom:3%;
+}
+
+.card-button {
+  position:absolute;
+  bottom:0;
+}
+
+.container {
+  padding: 2px 16px;
+  white-space: nowrap;
+  
+}
+
+.home-text {
+  padding-top:25%;
+  color:white;
+  font-size: 40px;
+}
+
+.home-button {
   color: #fff;
   background-color: #BB0A10;
   border-color:#BB0A10;
   font-weight:bold;
+  width: 15%;
+  height: 50px;
+  font-size: 14px;
+  margin-top: 1.5%;
+  font-size: 20px;
+}
+
+.home-button:hover {
+  transform: scale(1.1);
+}
+
+.home-button-container{
+  padding-top:10%;
+}
+
+.home-background {
+  /* The image used */
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9)), url(images/20190603_103903-trees-canopy-scaled.jpg);
+
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -10;
+}
+
+.explore-background {
+
+  padding-top:5%;
+
+  /* The image used */
+  background-image: url(images/pexels-sameera-madusanka-1572036.jpg);
+
+  background-repeat: repeat;
+  /* Set rules to fill background */
+  /* min-height: 100%; */
+  /* min-width: 1024px; */
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  top: 0;
+  bottom:0;
+  position:fixed;
+  overflow-y:scroll;
+  overflow-x:hidden;
+
+  z-index: -10;
+
+  background-size:cover;
+}
+
+.home-description {
+  font-size: 40;
+  color: white;
+}
+
+.results-background {
+
+  padding-top:5%;
+  padding-bottom:10%;
+
+  /* The image used */
+  background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)), url(images/pexels-julian-paolo-dayag-1673973.jpg);
+
+  /* Set rules to fill background */
+  min-height: 100%; 
+  /* min-width: 1024px; */
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  /* height: auto; */
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -10;
+
+  background-size:cover;
+}
+
+.results-title {
+  padding-top:6%;
+  color:white;
+}
+
+.results-text {
+  color:black;
+  background-color: #F6F7F7;
+  width:30%;
+  margin-top: 2%;
+  margin-left: 35%;
+  padding-top: 10%;
+  height: 290px;
+}
+select option{
+  padding: 5%;
+}
+
+@keyframes slideDown {
+  0% {
+    transform:translateY(100%);
+  }
+  100% {
+    transform:translateY(0);
+  }
+}
+
+/* .home-text-background {
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+} */
+
+.no-display {
+  display:none;
+}
+
+.results-button {
+  color: #fff;
+ background-color: #BB0A10;
+ border-color:#BB0A10;
+ font-weight:bold;
+ width: 30%;
+ height: 3.1em;
+ font-size: 14px;
+ margin-top: 5%;
+}
+
+.form-response{
+  margin-top: 3%;
+}
+.filter-button{
+>>>>>>> main
+  color: #fff;
+  background-color: #BB0A10;
+  border-color:#BB0A10;
+  font-weight:bold;
+<<<<<<< HEAD
   width: 90%;
   height: 3.1em;
   font-size: 14px;
@@ -358,10 +620,20 @@ padding-right: 5%;
   padding-right:2%;
 }
 .button-other-error{
+=======
+  width: 10%;
+  height: 3.1em;
+  font-size: 14px;
+  margin-top: 1.5%;
+}
+
+.search-button{
+>>>>>>> main
   color: #fff;
   background-color: #BB0A10;
   border-color:#BB0A10;
   font-weight:bold;
+<<<<<<< HEAD
   width: 90%;
   height: 3.1em;
   font-size: 14px;
@@ -382,4 +654,10 @@ padding-right: 5%;
   padding-top:0.5%;
   padding-left:2%;
   font-size: 14px;
+=======
+  width: 10%;
+  height: 45px;
+  font-size: 14px;
+  margin-top: 1.5%;
+>>>>>>> main
 }

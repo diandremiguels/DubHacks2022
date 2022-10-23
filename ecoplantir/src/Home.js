@@ -1,8 +1,18 @@
 import React, {Component} from "react";
-export default class Register extends Component{
+export default class Home extends Component{
   render() {
     return(
-      <h3>This is where home will be!</h3>
+      <div class="home-background home-text-background">
+        <div>
+          <h1 class="home-text"><b>Come along on our journey to sustainbility through planting.</b></h1>
+          <p class="home-description">Plants are super sexy</p>
+          <a class="home-button-container" href="/Explore">
+            <button class="home-button">Start</button>
+          </a>
+        </div>
+        
+      </div>
+      
     );
   }
 }

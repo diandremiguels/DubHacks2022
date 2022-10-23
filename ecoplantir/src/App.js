@@ -5,6 +5,7 @@ import About from './About.js';
 import Navbar from './Navbar.js';
 import Register from './Register.js';
 import Home from './Home.js';
+<<<<<<< HEAD
 import Dashboard from './Dashboard.js';
 import LoggedInNavbar from './LoggedInNavbar';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -21,6 +22,9 @@ const handleLogin = e => {
     }
   });
 }
+=======
+import Results from './Results.js';
+>>>>>>> main
 
 function App() {
   let component
@@ -39,9 +43,14 @@ function App() {
       break
     case "/Register":
       component = <Register/>
+<<<<<<< HEAD
     break
     case "/Dashboard":
     component = <Dashboard/>
+=======
+    case "/Results":
+      component = <Results/>
+>>>>>>> main
   }
   return (
     <div className="App">
