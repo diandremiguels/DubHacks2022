@@ -10,8 +10,41 @@ export default class Results extends Component{
       space: "any",
       light: "any",
       location: "any",
-      sustainabiity: "any"
-    };
+      sustainabiity: "any",
+    resources: [
+      {
+        Name:"Cherry Tomatoes",
+        space:"Small",
+        difficulty:"Easy",
+        instructions:"Water every two days and give lots of sunlight. It doesn't need a lot of space and is an easy plant to grow from South America.",
+        link:"https://cdn.shopify.com/s/files/1/0972/6282/products/cherry-bomb-tomato-organic-f1-hybrid-64-days-vegetables-pinetree-garden-seeds-731_800x.jpg?v=1602875855",
+        state:"",
+        sustainability:"Produce",
+        lighting:"High"
+      },
+      {
+        Name:"Hydrangea",
+        space:"Large",
+        difficulty:"Hard",
+        instructions:"Make sure the soil is always moist. It also needs sunlight but is easy to burn. Make sure to give it lots of space. Delicate plant from Washington.",
+        link:"https://static01.nyt.com/images/2020/06/29/realestate/01garden-hydrangeas1/01garden-hydrangeas1-mediumSquareAt3X-v2.jpg",
+        state:"Washington",
+        sustainability:"Local",
+        lighting:"High"
+      },
+      {
+        Name:"Mustard Greens",
+        space:"Medium",
+        difficulty:"Medium",
+        instructions:"Keep moist, will grow quickly. Originates from Africa",
+        link:"https://gardenerspath.com/wp-content/uploads/2020/10/Southern-Giant-Curled.jpg",
+        state:"",
+        sustainability:"Cover Crop",
+        lighting:"Medium"
+      },
+    ],
+  };
+ 
     this.changeFilterDisplay = this.changeFilterDisplay.bind(this);
   }
 
@@ -28,6 +61,41 @@ export default class Results extends Component{
       document.getElementById("filters").style.paddingTop = "0px";
       document.getElementById("filters").style.paddingBottom = "0px";
     }
+    this.updateCare = this.updateCare.bind(this);
+    this.updateLight = this.updateLight.bind(this);
+    this.updateState = this.updateState.bind(this);
+    this.updateSustainability = this.updateSustainability.bind(this);
+    this.updateDifficulty = this.updateDifficulty.bind(this);
+    this.applyFilters = this.applyFilters.bind(this);
+  }
+
+  updateCare(event) {
+    var e = document.getElementById("Difficulty");
+    this.setState({care: e.options[e.selectedIndex].text});
+  }
+
+  updateLight(event) {
+    var e = document.getElementById("Light");
+    this.setState({filter: e.options[e.selectedIndex].text});
+  }
+
+  updateState(event) {
+    var e = document.getElementById("State");
+    this.setState({filter: e.options[e.selectedIndex].text});
+  }
+
+  updateSustainability(event){
+    var e = document.getElementById("Sustainability");
+    this.setState({filter: e.options[e.selectedIndex].text});
+  }
+
+  updateDifficulty(event){
+    var e = document.getElementById("Difficulty");
+    this.setState({filter: e.options[e.selectedIndex].text});
+  }
+
+  applyFilters(event){
+    /* TODO */
   }
 
   render() {
@@ -36,7 +104,6 @@ export default class Results extends Component{
       <div class="results-background">
         <div class="results-title">
           <h1>Recommendations</h1>
-          <p>{this.props.sustainability}</p>
         </div>
         
         <a>
@@ -47,7 +114,7 @@ export default class Results extends Component{
           <div>
             <div>
               Care Difficulty&nbsp;&nbsp;
-              <select class="form-response">
+              <select id="Difficulty" value={this.state.care} class="form-response" onChange={this.updateCare}>
                 <option>Any</option>
                <option>Easy</option>
                <option>Medium</option>
@@ -56,25 +123,25 @@ export default class Results extends Component{
             </div>
             <div>
               Space&nbsp;&nbsp;
-              <select class="form-response">
+              <select id="Space" class="form-response">
                 <option>Any</option>
-                <option>Small (Desktop)</option>
-                <option>Medium (Potted)</option>
-                <option>Large (Outdoor)</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
               </select>
             </div>
             <div>
               Light Conditions&nbsp;&nbsp;
-              <select class="form-response">
+              <select id="Light" class="form-response">
                 <option>Any</option>
-                <option>Low (Cloudy)</option>
-                <option>Medium (Partly Cloudy)</option>
-                <option>High (Sunny)</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
               </select>
             </div>
             <div>
               Location&nbsp;&nbsp;
-              <select class="form-response">
+              <select id="Location" class="form-response">
                 <option>Any</option>
                 <option>Alabama</option>
                 <option>Alaska</option>
@@ -130,20 +197,39 @@ export default class Results extends Component{
             </div>
             <div>
               Sustainability Reason&nbsp;&nbsp;
-              <select className="form-response">
+              <select id="Sustainability" className="form-response">
                 <option>Any</option>
-                <option>Reduce Grocery Waste (Produce)</option>
-                <option>Support Local Ecology (Local)</option>
-                <option>Improve Soil Health (Cover Plants)</option>
+                <option>Produce</option>
+                <option>Local</option>
+                <option>Soil</option>
               </select>
             </div>
-            <button class="results-button">Search</button>
+            <button onClick={this.applyFilters} class="results-button">Search</button>
           </div>
           
         </div>
         <div>
-        
         </div>
+
+        
+          {
+            this.state.resources.map(resource =>(
+              // (resource.sustainability === this.state.sustainabiity) &&
+              // this.checkResource(resource) &&
+              <div className="column">
+                <div className="card-clone">
+                  <div>
+                    <img className="card-image-clone"src={resource.link}></img>
+                  </div>
+                  <h3>{resource.Name}</h3>
+                  <p>{resource.instructions}</p>
+                </div>
+              </div>
+              ))
+          }
+        
+        
+
       </div>
     );
   }

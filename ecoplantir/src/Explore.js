@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import './App.css';
-import PlantPic from './images/pexels-julian-paolo-dayag-1673973.jpg'
+import PlantPic from './images/fruits-vegetables-background-food-collection-2872552.jpg'
+import MapPic from './images/lc-banner-2020ATC.jpg';
+import SproutPic from './images/depositphotos_8564676-stock-photo-group-of-the-beginnings.jpg'
 import Results from './Results';
 export default class Explore extends Component{
   constructor(props) {
@@ -41,8 +43,6 @@ export default class Explore extends Component{
     return(
       
       <div class="explore-page explore-background">
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
-
         <div class="explore-display-text">
           <h1><b> Explore Sustainable Plants </b></h1>
           <p>Use the search bar to see if we recommend a certain plant, or explore plants that are sustainable for different reasons</p>
@@ -71,7 +71,7 @@ export default class Explore extends Component{
               </div>
             </a>
             <a onClick={this.handleSustainability} href="/Results" class="card" value="Ecology">
-              <img src={PlantPic}/>
+              <img src={MapPic}/>
               <div class="card-text">
                 <h4><b> Support Local Ecology </b></h4> 
                 <p> Help support the local biodiversity by growing native plants that provide services to other local organisms.
@@ -80,7 +80,7 @@ export default class Explore extends Component{
               </div>
             </a>
             <a onClick={this.handleSustainability} href="/Results" class="card" value="Soil">
-              <img src={PlantPic}/>
+              <img src={SproutPic}/>
               <div class="card-text">
                 <h4><b> Improve Soil Health </b></h4> 
                 <p> Cover crops help lessen soil erosion and add organic nutrients to soil when they turn over to seed.
